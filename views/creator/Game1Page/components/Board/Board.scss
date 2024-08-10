@@ -1,0 +1,123 @@
+.boardGame {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f1def0; // Light background color for a vibrant look
+}
+
+.player-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6f7ff; // Light blue background for player columns
+  border-right: 2px solid #ccd5de; // Border between columns
+  padding: 1rem;
+}
+
+.active-player {
+  background-color: #7dbde7; // Light blue for the active player's column
+  border-right: 2px solid #cb4cc9; // Darker blue border for the active player
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center; // Center align horizontally
+  justify-content: center; // Center align vertically
+}
+
+.table {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #e7dede; // White background for the board
+
+  & > :nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  & > :nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+  }
+}
+
+.roll-dice-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.voice-button {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #84a8c4;
+  }
+}
+
+.start-button {
+  background-color: #28a745; // Green background for start button
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #218838; // Darker green on hover
+  }
+}
+
+.player-image {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+}
+
+.player-heading {
+  margin-top: 1rem;
+  color: #333; // Dark color for text
+}
